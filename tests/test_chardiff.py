@@ -6,7 +6,7 @@ from chardiff import chardiff, get_color
 
 
 class TestCharDiff(unittest.TestCase):
-    self.RESET = colorama.Style.RESET_ALL
+    RESET = colorama.Style.RESET_ALL
 
     def test_diff(self):
         a = "a"
