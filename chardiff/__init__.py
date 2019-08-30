@@ -3,10 +3,19 @@ import colorama
 
 def chardiff(a, b, marker=colorama.Style.BRIGHT):
     s = ""
+    marked = False
     for i in range(len(a)):
-        if a[i] != b[i]:
+        if i < len(b):
+            if a[i] != b[i]:
+                if not marked:
+                    s += marker
+            else:
+                marked = False
+                s += colorama.Style.RESET_ALL
+        else:
             s += marker
         s += a[i]
+    if marked:
         s += colorama.Style.RESET_ALL
     return s
 
