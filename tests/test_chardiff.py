@@ -20,7 +20,7 @@ class TestCharDiff(unittest.TestCase):
         marker = colorama.Fore.RED
         result = marker + a + colorama.Style.RESET_ALL
 
-        self.assertEqual(chardiff(a, b), result)
+        self.assertEqual(chardiff(a, b, marker=marker), result)
 
 
 class TestGetColor(unittest.TestCase):
