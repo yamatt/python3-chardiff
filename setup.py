@@ -10,4 +10,5 @@ setup(
     author_email='matt@copperwaite.net',
     url='https://github.com/yamatt/python3-chardiff',
     packages=['chardiff'],
+    scripts = ['scripts/chardiff']
 )
