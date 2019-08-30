@@ -13,11 +13,19 @@ def get_args():
         "a", help="First string. This is the one printed to compare to."
     )
     parser.add_argument("b", help="Second string to compare to.")
-    parser.add_argument("-c", "--color", help="Color to display diff", type=get_color)
+    parser.add_argument(
+        "-c",
+        "--color",
+        help="Color to display diff",
+        type=get_color
+    )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = get_args()
     colorama.init()
-    print(chardiff(args.a, args.b, marker=args.color))
+    if args.color:
+        print(chardiff(args.a, args.b, marker=args.color))
+    else:
+        print(chardiff(args.a, args.b))
