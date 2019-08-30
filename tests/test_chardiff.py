@@ -6,11 +6,13 @@ from chardiff import chardiff, get_color
 
 
 class TestCharDiff(unittest.TestCase):
+    self.RESET = colorama.Style.RESET_ALL
+
     def test_diff(self):
         a = "a"
         b = "b"
         marker = colorama.Style.BRIGHT
-        result = marker + a + colorama.Style.RESET_ALL
+        result = marker + a + self.RESET
 
         self.assertEqual(chardiff(a, b), result)
 
@@ -18,7 +20,7 @@ class TestCharDiff(unittest.TestCase):
         a = "a"
         b = "b"
         marker = colorama.Fore.RED
-        result = marker + a + colorama.Style.RESET_ALL
+        result = marker + a + self.RESET
 
         self.assertEqual(chardiff(a, b, marker=marker), result)
 
@@ -26,7 +28,7 @@ class TestCharDiff(unittest.TestCase):
         a = "abc"
         b = "a"
         marker = colorama.Style.BRIGHT
-        result = "a" + colorama.Style.BRIGHT + "bc" + colorama.Style.RESET_ALL
+        result = "a" + marker + "bc" + self.RESET
 
         self.assertEqual(chardiff(a, b), result)
 
@@ -42,7 +44,7 @@ class TestCharDiff(unittest.TestCase):
         a = "string"
         b = "strong"
         marker = colorama.Style.BRIGHT
-        result = "str" + colorama.Style.BRIGHT + "i" + colorama.Style.RESET_ALL + "ng"
+        result = "str" + marker + "i" + self.RESET + "ng"
 
         self.assertEqual(chardiff(a, b), result)
 
