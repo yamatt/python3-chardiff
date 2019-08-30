@@ -1,5 +1,6 @@
 import colorama
 
+
 def chardiff(a, b, marker=colorama.Style.BRIGHT):
     s = ""
     for i in range(len(a)):
@@ -8,6 +9,7 @@ def chardiff(a, b, marker=colorama.Style.BRIGHT):
         s += a[i]
         s += colorama.Style.RESET_ALL
     return s
+
 
 def get_color(color):
     color = color.upper()
