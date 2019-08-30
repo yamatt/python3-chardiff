@@ -10,9 +10,9 @@ def get_args():
         description="Compare two strings and find the diff"
     )
     parser.add_argument(
-        "a", required=True, help="First string. This is the one printed to compare to."
+        "a", help="First string. This is the one printed to compare to."
     )
-    parser.add_argument("b", required=True, help="Second string to compare to.")
+    parser.add_argument("b", help="Second string to compare to.")
     parser.add_argument("-c", "--color", help="Color to display diff", type=get_color)
     return parser.parse_args()
 
