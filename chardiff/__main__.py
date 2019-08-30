@@ -13,12 +13,7 @@ def get_args():
         "a", help="First string. This is the one printed to compare to."
     )
     parser.add_argument("b", help="Second string to compare to.")
-    parser.add_argument(
-        "-c",
-        "--color",
-        help="Color to display diff",
-        type=get_color
-    )
+    parser.add_argument("-c", "--color", help="Color to display diff", type=get_color)
     return parser.parse_args()
 
 
