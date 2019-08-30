@@ -40,5 +40,5 @@ jobs:
       run: |
         python3 setup.py sdist
         pip3 install twine
-        twine upload -u "__token__" -p "$PYPI_API" dist/*
+        twine upload -u "__token__" -p "${{ secrets.PYPI_API }}" dist/*
         #curl -sSL -XPOST -H "Authorization: token ${GITHUB_TOKEN}" --upload-file "${file}" --header "Content-Type:application/octet-stream" "https://uploads.github.com/repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}/assets?name=${file}"
