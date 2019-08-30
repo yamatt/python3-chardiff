@@ -24,7 +24,8 @@ jobs:
         pip3 install -r requirements.txt
     - name: Lint
       run: |
-        pip3 install flake8==3.7.8 black
+        pip3 install flake8==3.7.8
+        pip3 install black==19.3b0
         # look for formatting errors
         black --check --target-version py35 --target-version py36 --target-version py37 chardiff
         # stop the build if there are Python syntax errors or undefined names
