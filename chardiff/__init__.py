@@ -1,10 +1,12 @@
 import colorama
 
+
 def marker_on(s, marked, marker):
     if not marked:
         s += marker
         marked = True
     return s, marked
+
 
 def marker_off(s, marked):
     if marked:
@@ -12,12 +14,13 @@ def marker_off(s, marked):
         marked = False
     return s, marked
 
+
 def chardiff(a, b, marker=colorama.Style.BRIGHT):
     s = ""
     marked = False
 
     for i in range(len(a)):
-        if i > len(b)-1:
+        if i > len(b) - 1:
             s, marked = marker_on(s, marked, marker)
         else:
             if a[i] == b[i]:
