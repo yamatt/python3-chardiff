@@ -4,7 +4,7 @@ from distutils.core import setup
 
 setup(
     name='chardiff',
-    version='1.0',
+    version='1.0.1',
     description='Compare 2 strings and highlight differences',
     long_description=open("README.md", encoding='utf-8').read(),
     long_description_content_type='text/markdown',
