@@ -35,7 +35,6 @@ class TestCharDiff(unittest.TestCase):
     def test_diff_b_longer_a(self):
         a = "a"
         b = "abc"
-        marker = colorama.Style.BRIGHT
         result = "a"
 
         self.assertEqual(chardiff(a, b), result)
@@ -47,6 +46,7 @@ class TestCharDiff(unittest.TestCase):
         result = "str" + marker + "i" + self.RESET + "ng"
 
         self.assertEqual(chardiff(a, b), result)
+
 
 class TestGetColor(unittest.TestCase):
     def test_lower_case_color_name(self):
