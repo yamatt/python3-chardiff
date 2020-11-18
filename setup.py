@@ -12,5 +12,6 @@ setup(
     author_email='matt@copperwaite.net',
     url='https://github.com/yamatt/python3-chardiff',
     packages=['chardiff'],
+    install_requires=open("requirements.txt", encoding="utf-8").readlines(),
     scripts=['scripts/chardiff']
 )
